@@ -18,6 +18,8 @@ addons:
 install:
 - "[ $CXX = g++ ] && export CXX=g++-6 || true"
 - "[ $CXX = clang++ ] && export CXX=clang++-3.8 || true"
+- apt-get install -qq cppcheck
 script:
   - make
   - make test
+  - cppcheck -- quiet --error-exitcode=1
