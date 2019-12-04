@@ -1,0 +1,7 @@
+# Travis check for C++ 
+
+a.out
+hello
+*.o
+*.a
+*.so
